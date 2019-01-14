@@ -1,17 +1,23 @@
 class Player {
-  constructor() {
-    this.role = new Role();
+  constructor(city) {
+    // this.role = new Role();
     this.turn;
-    this.currentCity;
+    this.currentCity = city;
     this.disease = false;
     this.cure = false;
     this.citiesCured = 0;
 
   }
 
-  getMessage() {
-    return this.message;
+  moveToCity(city) {
+    this.currentCity = city;
+
   }
+
+  cureCity() {
+    return cityCured;
+  }
+
 }
 
-export { Player };
+export { Pglayer };

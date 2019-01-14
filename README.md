@@ -29,8 +29,9 @@ Clone the code from [GitHub](https://github.com/skillitzimberg/pandemic).
 
 * Game
  - map
- - cities
+ - cities[]
  - citiesCured[];
+ - currentPlayer
 
 * Player
  - role
@@ -52,9 +53,6 @@ Clone the code from [GitHub](https://github.com/skillitzimberg/pandemic).
   -- does it spread at timed intervals?
   -- does it spread in certain conditions?
 
-* Research Station
-  - City
-
 * City
  - population (if gets too low, city is wiped out)
  - infected (bool)
@@ -63,9 +61,6 @@ Clone the code from [GitHub](https://github.com/skillitzimberg/pandemic).
  - connections to other cities
  - has research station
   -- Can a city that has been cured be infected again? Yes.
-
-* Cure
-  -- what diseases does it cure?
 
 * Turn
  - action
