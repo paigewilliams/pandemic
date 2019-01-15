@@ -30,7 +30,7 @@ $(document).ready(function() {
   newGame = new Game();
 
   let request = new XMLHttpRequest();
-  const url = `http://api.giphy.com/v1/gifs/search?q=space-stars&api_key=iS9al73WrT1WiMW1UUKf1LTY1OEXPCSQ`;
+  const url = `http://api.giphy.com/v1/gifs/search?q=space-stars&api_key=${process.env.GIPHY_API_KEY}`;
 
   request.onreadystatechange = function(){
     if (this.readyState === 4 && this.status === 200){

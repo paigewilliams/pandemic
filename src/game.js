@@ -27,7 +27,6 @@ class Game {
 
   getRandomCity() {
     setInterval(() => {
-      debugger;
       let healthyCities = [];
       for (let i = 0; i < this.cities.length; i++) {
         if (this.cities[i].infectedPopulation >= 0 && this.cities[i].infectedPopulation <= 15) {
