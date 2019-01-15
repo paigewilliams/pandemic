@@ -1,3 +1,6 @@
+import { Game } from './../src/game';
+import { City } from './../src/city';
+
 class Player {
   constructor(city) {
     // this.role = new Role();
@@ -15,9 +18,12 @@ class Player {
   }
 
   cureCity() {
-    return cityCured;
+    this.citiesCured++;
+    const city = game.getCity(this.currentCity);
+    city.infectedPopulation = 0;
+
   }
 
 }
 
-export { Pglayer };
+export { Player };

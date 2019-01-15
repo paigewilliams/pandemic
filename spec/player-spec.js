@@ -7,4 +7,6 @@ describe('Player', function() {
     newPlayer.moveToCity('Portland');
     expect(newPlayer.currentCity).toEqual('Portland');
   });
+
+
 });
