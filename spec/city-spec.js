@@ -17,9 +17,13 @@ describe('City', function() {
     expect(city.healthyPopulation).toBeTruthy(0);
   });
 
-  it('cityConnections() should test if city has connections', function(){
-    debugger;
-    game.setCityConnections()
-    expect(game.cities[0].connectionsToOtherCities.length).toBeGreaterThan(0);
+  it('infectCity() should create an infected population to a city', function() {
+    const randomInt = Math.floor(Math.random() * Math.floor(10);
+
+    let randomCity = game.getCity(game.cityNames[randomInt]);
+
+    randomCity.infectCity();
+    expect(randomCity.healthyPopulation).not.toEqual(0);
   })
+
 });

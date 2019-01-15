@@ -11,25 +11,13 @@ class Game {
   }
 
   setCityConnections() {
-    for(let i = 0; i < this.cities.length; i++){
-      let randomOne = Math.floor(Math.random() * Math.floor(this.cities.length));
-      // this.cities[i].cityConnections();
-      for(let j = 0; j <= randomOne; j++) {
-        let randomTwo = Math.floor(Math.random() * Math.floor(this.cities.length));
 
-        this.cities[i].connectionsToOtherCities.push(this.cityNames[randomTwo]);
+    for(let i = 0; i < this.cities.length; i++) {
 
-      }
-      // let cityConnections = () => {
-      //   let cityConnectionsByPolulation = parseInt(this.cities[i].population / 100 * 3);
-      //   for(let i = 0; i <= cityConnectionsByPolulation; i++) {
-      //   }
-      // }
+      this.cities[i].connectionsToOtherCities.push(this.cities[i].name);
     }
-
   }
-
-
+  
   getCity(city) {
     for(let i = 0; i <= this.cities.length; i++) {
       if(this.cities[i].name === city) {

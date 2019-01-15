@@ -16,10 +16,8 @@ describe('Game', function(){
 
   it('getCity(city) should return the correct city object', function() {
     const portland = new City('Portland');
-    expect(game.getCity('Portland')).toEqual(portland);
-    expect(game.getCity('Atlanta')).not.toEqual(portland);
+    expect(game.getCity('Portland').name).toEqual(portland.name);
+    expect(game.getCity('Atlanta').name).not.toEqual(portland.name);
   });
-
-
 
 });
