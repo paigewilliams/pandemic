@@ -20,6 +20,6 @@ class Player {
     this.citiesCured++;
   };
 
-};
+}
 
 export { Player };

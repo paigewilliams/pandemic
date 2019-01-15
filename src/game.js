@@ -38,6 +38,6 @@ class Game {
     foundCity.infectedPopulation = 0;
     return foundCity;
   };
-};
+}
 
 export { Game };

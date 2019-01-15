@@ -29,6 +29,6 @@ class City {
   //
   // }
 
-};
+}
 
 export { City };
