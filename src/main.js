@@ -16,10 +16,11 @@ $(document).ready(function() {
     event.preventDefault();
     const startingCity = $('#startingCity').val();
     const newPlayer = new Player(startingCity);
+    const atlantaCDC = newGame.getCity('Atlanta');
+    atlantaCDC.buildResearchStation();
     newGame.getRandomCity();
-    newGame.cityNames.forEach(function(name) {
-      $('#cities').append(`<li>${name}</li>`);
-
+    newGame.cities.forEach(function(city) {
+      $('#cities').append(`<li>Name: ${city.name}; Population: ${city.population}; Infected Pop: ${city.infectedPopulation}%;  Research Station: ${city.hasResearchStation}</li>`);
     });
   });
 
