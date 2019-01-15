@@ -22,6 +22,11 @@ $(document).ready(function() {
     newGame.cities.forEach(function(city) {
       $('#cities').append(`<li>Name: ${city.name}; Population: ${city.population}; Infected Pop: ${city.infectedPopulation}%;  Research Station: ${city.hasResearchStation}</li>`);
     });
+
+    $('#currentCity').html(newPlayer.currentCity);
+    $('#citiesCured').html(newPlayer.citiesCured);
+
+
   });
 
 });
