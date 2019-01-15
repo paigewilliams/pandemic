@@ -13,7 +13,7 @@ class City {
   }
 
   infectCity() {
-    if(this.healthyPopulation === 0) {
+    if(this.healthyPopulation <= 100 && this.healthyPopulation >= 85 ) {
       this.infectedPopulation = parseInt(Math.random() * 100);
     } else {
       return false;

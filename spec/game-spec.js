@@ -25,4 +25,9 @@ describe('Game', function(){
     expect(game.cities[0].healthyPopulation).not.toEqual(0);
   });
 
+  it('getRandomCity() should return a random city', function() {
+    game.getRandomCity();
+    expect(game.cities[0].healthyPopulation).toEqual(6);
+  });
+
 });

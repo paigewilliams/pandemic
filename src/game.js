@@ -27,8 +27,15 @@ class Game {
 
   getRandomCity() {
     setInterval(() => {
-      let randomInt = Math.floor(Math.random() * Math.floor(10));
-      let randomCity = this.getCity(this.cityNames[randomInt]);
+      debugger;
+      let healthyCities = [];
+      for (let i = 0; i < this.cities.length; i++) {
+        if (this.cities[i].infectedPopulation >= 0 && this.cities[i].infectedPopulation <= 15) {
+          healthyCities.push(this.cities[i]);
+        }
+      }
+      let randomInt = Math.floor(Math.random() * Math.floor(healthyCities.length));
+      let randomCity = this.getCity(healthyCities[randomInt].name);
       randomCity.infectCity();
     }, 30000);
   };
