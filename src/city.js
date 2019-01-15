@@ -7,7 +7,8 @@ class City {
     this.population = parseInt(Math.random() * 100);
     this.infectedPopulation = parseInt(Math.random() * 100);
     this.healthyPopulation = 100 - this.infectedPopulation;
-    this.connectionsToOtherCities = [];
+    // stretch goal: have a random array of connected cities that is not the current city
+    // this.connectionsToOtherCities = [];
     this.hasResearchStation = false;
   }
 
@@ -17,12 +18,17 @@ class City {
     } else {
       return false;
     }
-  }
+  };
 
-  killPeople() {
 
-  }
+  buildResearchStation() {
+    this.hasResearchStation = true;
+  };
 
-}
+  // killPeople() {
+  //
+  // }
+
+};
 
 export { City };
