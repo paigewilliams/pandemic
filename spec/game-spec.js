@@ -20,4 +20,9 @@ describe('Game', function(){
     expect(game.getCity('Atlanta').name).not.toEqual(portland.name);
   });
 
+  it('infectCity() should create an infected population to a city', function() {
+    game.getRandomCity();
+    expect(game.cities[0].healthyPopulation).not.toEqual(0);
+  });
+
 });

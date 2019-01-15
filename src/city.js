@@ -11,21 +11,15 @@ class City {
     this.hasResearchStation = false;
   }
 
-
-
   infectCity() {
-    
+    if(this.healthyPopulation === 0) {
+      this.infectedPopulation = parseInt(Math.random() * 100);
+    } else {
+      return false;
+    }
   }
 
   killPeople() {
-
-  }
-
-  cureDisease() {
-
-  }
-
-  buildResearchStation() {
 
   }
 

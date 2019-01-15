@@ -17,12 +17,19 @@ class Player {
 
   }
 
-  cureCity() {
+  citiesCuredIncrease() {
     this.citiesCured++;
-    const city = game.getCity(this.currentCity);
-    city.infectedPopulation = 0;
-
   }
+
+  // buildResearchStation() {
+  //   if(this.citiesCured >= 3){
+  //     const city = game.getCity(this.currentCity);
+  //     city.hasResearchStation = true;
+  //   }
+  //   else {
+  //     return false;
+  //   }
+  // }
 
 }
 

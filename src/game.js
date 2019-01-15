@@ -17,18 +17,30 @@ class Game {
       this.cities[i].connectionsToOtherCities.push(this.cities[i].name);
     }
   }
-  
+
   getCity(city) {
-    for(let i = 0; i <= this.cities.length; i++) {
+    for(let i = 0; i < this.cities.length; i++) {
       if(this.cities[i].name === city) {
         return this.cities[i];
-      } else {
-        return false;
       }
+      // return false;
     }
   }
 
+  getRandomCity() {
+    setInterval(() => {
+      let randomInt = Math.floor(Math.random() * Math.floor(10));
+      // const randomInt = 0;
+      let randomCity = this.getCity(this.cityNames[randomInt]);
+      randomCity.infectCity();
+    }, 30000);
+  }
 
+  cureCity(city){
+    let foundCity = this.getCity(city);
+    foundCity.infectedPopulation = 0;
+    return foundCity;
+  }
 
 
 }

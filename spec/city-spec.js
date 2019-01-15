@@ -8,6 +8,11 @@ describe('City', function() {
 
   beforeEach(function() {
    game = new Game();
+   jasmine.clock().install();
+  })
+
+  afterEach(function() {
+    jasmine.clock().uninstall();
   })
 
   it('this.population, this.infectedPopulation and this.healthyPopulation should be a random number', function() {
@@ -17,13 +22,6 @@ describe('City', function() {
     expect(city.healthyPopulation).toBeTruthy(0);
   });
 
-  it('infectCity() should create an infected population to a city', function() {
-    const randomInt = Math.floor(Math.random() * Math.floor(10);
 
-    let randomCity = game.getCity(game.cityNames[randomInt]);
-
-    randomCity.infectCity();
-    expect(randomCity.healthyPopulation).not.toEqual(0);
-  })
 
 });
